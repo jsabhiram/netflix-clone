@@ -25,3 +25,20 @@ movieCard.forEach((card) => {
     card.style.transform = "scale(1)";
   });
 });
+window.onload = () => {
+  setTimeout(() => {
+    // replace background image with a video
+    const hero = document.querySelector(".hero");
+    const video = document.createElement("video");
+    video.src = "video.mp4";
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    document.addEventListener("click", () => {
+    video.muted = false;
+});
+    video.play();
+    hero.style.backgroundImage = "none";
+    hero.appendChild(video);
+  },3500);
+}
