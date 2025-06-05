@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7)0%, rgba(0, 0, 0, 0)100%);
+    background-color: black;
+    z-index: 999;
+}
+.logo{
+    /* width: 100px; */
+    gap: 20px;
+    /* height: 25px */
+    cursor: pointer;
+    /* width: 100px; */
+    height: 25px;
+}
+.navbar-nav{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-link{
+    color:aliceblue;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: #FF0000;
+}
+.navbar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navbar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.profile-icon{
+    width: 25px;
+    height: 25px;   
+    cursor: pointer;
+}
+.hero{
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0.8)100%), url(image.jpg);
+    background-attachment: scroll;
+    /* padding-top: 100px; */
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 130vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+    margin-bottom: 20px;
+
+}
+.hero-content{
+    max-width: 600px;
+    text-align: center;
+}
+.hero-title{
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+.hero-description{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: aliceblue;
+}
+.hero-button{
+    display: flex;
+    gap: 16px;
+}
+.btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 8px;
+  transition: all 0.3s;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.btn-play{
+    background-color: #eae6e6;
+    color: #0a0a0a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    gap: 8px;
+    transform: all 0.3;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.btn-play:hover{
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    gap: 8px;
+    transform: all 0.3;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.btn-more-info {
+  background-color: #fff;
+  color: #000;
+}
+/* Movie Section */
+.container {
+  max-width: 100%;
+  padding: 0 4%;
+}
+
+/* Section Style */
+.content-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.content-row{
+    display: flex;
+    gap:15px;
+    overflow-x:auto;
+}
+.content-row::-webkit-scrollbar {
+  height: 8px;
+}
+
+.content-row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content-row::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+.content-card{
+    position:relative;
+    min-width:250px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink:0;
+    box-shadow:0 4px 15px rgba(0, 0, 0,0.3)
+}
+
+.content-card:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.content-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: brightness 0.3s ease;
+}
+
+.content-card:hover img {
+   filter:brightness(0.4);
+}
+
+.netflix-badge{
+    position:relative;
+    top:8px;
+    left:8px;
+    background-color: #FF0000;
+    color:#eae6e6;
+    width:24px;
+    height:24px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight:bold;
+    z-index: 2;
+}
+
+.card-overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:linear-gradient(180deg,rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 50%,rgba(0, 0, 0, 0.9)100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+}
+
+.content-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.overlay-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.overlay-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overlay-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.overlay-control{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.control-btn{
+    width: 35px;
+    height: 35px;
+    border-radius: 2px solid white;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.control-btn:hover{
+    background-color: #c6bce3;
+    transform: scale(1.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    gap: 8px;
+    transform: all 0.3;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+
+.play-btn .check-btn .thumbs-btn .more-btn {
+  background: white;
+  color: black;
+}
+.play-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.overlay-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.info-badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* icons */
+/* Button Icons */
+.play-btn::before {
+  content: "▶";
+}
+.check-btn::before {
+  content: "✓";
+}
+.thumbs-btn::before {
+  content: "👍";
+}
+.more-btn::before {
+  content: "▾";
+}
+
+.content-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom,transparent 0%,transparent 50%,rgba(0, 0, 0, 0.9)100%);
+    z-index: 1;
+}
+
+/*Responsveness*/
+
+@media (max-width: 120px) {
+  .container {
+    padding: 0 3%;
+  }
+
+  .container-card {
+    min-width: 220px;
+    height: 125px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
