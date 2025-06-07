@@ -34,11 +34,36 @@ window.onload = () => {
     video.autoplay = true;
     video.loop = true;
     video.muted = true;
-    document.addEventListener("click", () => {
-    video.muted = false;
-});
+    // document.addEventListener("click", () => {
+    // video.muted = false;
+// });
     video.play();
     hero.style.backgroundImage = "none";
     hero.appendChild(video);
   },3500);
+}
+
+function mute(){
+    const video = document.querySelector('video');
+    // fas fa-volume-mute
+
+    if(video.muted){
+        video.muted = false;
+
+    }
+    else{
+        video.muted = true;
+    }
+    // video.muted = !video.muted;
+}
+function status(){
+     const video = document.querySelector('video');
+ // fas fa-volume-mute
+ if(video.muted){
+     return true;
+ }
+ else{
+     return false;
+ }
+ // video.muted = !video.muted;
 }

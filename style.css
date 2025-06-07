@@ -80,6 +80,30 @@ body{
     margin-bottom: 20px;
 
 }
+.hero-container {
+    text-align: left; /* Aligns text inside the container */
+    
+    position: absolute; /* Ensures it's placed over the video */
+    top: 50%; /* Centers it vertically */
+    left: 5%; /* Moves it to the left instead of centering */
+    transform: translateY(-50%); /* Adjusts vertical centering */
+    
+    color: white; /* Ensures readability */
+    z-index: 2; /* Keeps it above the video */
+    background: transparent; /* Keeps the background clear */
+    padding: 20px; /* Adds spacing */
+    border-radius: 10px; /* Optional styling */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video fills the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .hero-content{
     max-width: 600px;
     text-align: center;
@@ -96,6 +120,18 @@ body{
 .hero-button{
     display: flex;
     gap: 16px;
+}
+.mute{
+  background-color: #fff;
+color: #000;
+border: none;
+padding: 10px 20px;
+font-size: 1rem;
+cursor: pointer;
+gap: 8px;
+transition: all 0.3s;
+border-radius: 4px;
+transition: background-color 0.3s ease;
 }
 .btn {
   background-color: #fff;
@@ -356,4 +392,66 @@ body{
   .section-title {
     font-size: 1.6rem;
   }
+}
+
+.logo-panel{
+  /* background-color: #FF0000; */
+  background: transparent;
+  display: flex;
+  justify-content:left;
+  align-items: center;
+  /* padding: 10px 20px; */
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 8px;
+  transition: all 0.3s;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+#sp{
+  padding-left: 15px;
+}
+
+.options{
+  color: #c6bce3;
+  display: grid;
+}
+
+.collection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot-link{
+  color: #676262;
+    padding-top:20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+  text-decoration: none;
+}
+.foot-link:hover{
+  color: #FF0000;
+  transition: 0.35s;
+}
+.foot{
+  height: 200px;
+}
+.copyright{
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #676262;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copyright:hover{
+  /* color: #FF0000; */
+  transition: 0.35s;
+}
+#copy{
+  padding-left: 5px;
+  padding-right: 5px;
 }
